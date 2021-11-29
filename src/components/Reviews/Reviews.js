@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react/cjs/react.development"
+import { useState, useEffect } from "react"
 import Spinner from "../Spinner/Spinner"
 import s from './Reviews.module.css'
 

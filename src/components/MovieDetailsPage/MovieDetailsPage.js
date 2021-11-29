@@ -71,7 +71,7 @@ export function MovieDetailsPage({id}) {
             </div>
             <Link to={`/movies/${id}/cast`} className={s.link}>Cast</Link>
             <Link to={`/movies/${id}/reviews`} className={s.link}>Reviews</Link>
-            <Suspense>
+            <Suspense fallback={<Spinner/>}>
                 <Switch>
                     <Route path='/movies/:movieId/cast' component={CastPage} />
                     <Route path='/movies/:movieId/reviews' component={ReviewsPage} />
