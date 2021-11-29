@@ -1,0 +1,18 @@
+.searchForm {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+  background-color: rgb(178, 196, 196);
+  border: 1px solid gray;
+}
+.loader {
+  margin-top: 100px;
+  text-align: center;
+}
+.Form {
+  margin-top: 100px;
+}

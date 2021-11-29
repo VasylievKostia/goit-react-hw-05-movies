@@ -1,0 +1,31 @@
+.list {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.imgWraper {
+  width: auto;
+}
+
+.name {
+  font-size: 24px;
+  color: rgb(38, 131, 69);
+}
+.loader {
+  margin-top: 100px;
+  text-align: center;
+}

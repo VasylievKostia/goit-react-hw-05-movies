@@ -1,0 +1,37 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.item:nth-child(2n) {
+  background-color: rgb(178, 196, 196);
+}
+
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 80%;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+}
+
+.userDataThomb {
+  padding: 10px;
+  margin-right: 10px;
+  width: 200px;
+  /* display: flex; */
+}
+
+.username {
+  padding-top: 15px;
+}
+
+.content {
+  max-width: 100%;
+  text-align: start;
+}
+.loader {
+  margin-top: 100px;
+  text-align: center;
+}

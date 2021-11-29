@@ -1,0 +1,41 @@
+.conteiner {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.info {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.subConteiner {
+  display: flex;
+  align-items: center;
+}
+.subTitle {
+  margin-right: 20px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.item {
+  margin-right: 10px;
+}
+.loader {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.link {
+  display: block;
+  font-size: 24px;
+  color: black;
+}
+.link:hover {
+  color: cornflowerblue;
+}
