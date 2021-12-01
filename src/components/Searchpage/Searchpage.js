@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Loader from "react-loader-spinner"
 import { List } from "../List/List"
 import s from '../Searchpage/Searchpage.module.css'
@@ -10,7 +10,7 @@ export function Searchpage() {
         setSearchValue(e.target.value)
     }
     const handleSubmit = e => {
-         e.preventDefault()
+        e.preventDefault()
         if (searchValue === '') {
             return alert('nothing to search!')
         }
@@ -18,14 +18,24 @@ export function Searchpage() {
             .then(res => res.json())
             .then(result => {
                 setStatus('loading')
-                    setSearchedMovies(result)
-                    setStatus('success')   
+                setSearchedMovies(result)
+                setStatus('success')
+                
+                localStorage.setItem('data', JSON.stringify(result))   
             })
             .catch(err => {
                 console.log(err)
                 setStatus('error')
             })
     }
+    useEffect(() => {
+        setSearchedMovies(JSON.parse(localStorage.getItem('data')))
+    }, [])
+     useEffect(() => {
+         
+         setStatus('success')
+    }, [serchedMovies])
+
     return (<>
     <form onSubmit={handleSubmit} className={s.Form}> 
         <input
@@ -46,6 +56,6 @@ export function Searchpage() {
             height={100}
             width={100}/>}
         {status === 'error' && <p>somthint wrong, please try later</p>}
-        {status === 'success' && <List array={serchedMovies} />}
+        {status === 'success' && serchedMovies && <List array={serchedMovies} />}
     </>)
 }
